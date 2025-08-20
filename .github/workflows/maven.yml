@@ -13,18 +13,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 23
+    - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
-        java-version: '23'
+        java-version: '21'
         distribution: 'temurin'
         cache: maven
     - name: Perform the Unit Test Cases
       run: mvn -B test
 
-  security:
+    snyk:
     needs: build
-    name: SA scan using snyk
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
