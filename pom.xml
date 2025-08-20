@@ -14,7 +14,7 @@
 	<name>d13revision</name>
 	<description>Day 13 revision project for Spring Boot</description>
 	<properties>
-		<java.version>23</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
